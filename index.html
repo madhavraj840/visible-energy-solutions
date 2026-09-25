@@ -12,29 +12,28 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308222B'/%3E%3Crect x='6' y='6' width='9' height='9' fill='%23FFB400'/%3E%3Crect x='17' y='6' width='9' height='9' fill='none' stroke='%23EFF3F2' stroke-width='2'/%3E%3Crect x='6' y='17' width='9' height='9' fill='none' stroke='%23EFF3F2' stroke-width='2'/%3E%3Crect x='17' y='17' width='9' height='9' fill='none' stroke='%23EFF3F2' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=Hind:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Visible Energy Solutions","description":"Solar power developer and wholesale trader in Jaipur: solar panels, solar power plants, solar systems, solar street lights, Online UPS and solar power plant installation.","telephone":"+91-7014066390","foundingDate":"2019","taxID":"08BKCPB1028E1ZW","address":{"@type":"PostalAddress","streetAddress":"1-C-B, Vishveshariya Nagar, Near Triveni Flyover, Gopalpura Bypass Rd","addressLocality":"Jaipur","addressRegion":"Rajasthan","postalCode":"302018","addressCountry":"IN"}}
 </script>
 <style>
-/* Tokens: a drafting sheet. Petrol-black ink for lines and type, amber ONLY for energy (fills, current, CTAs), never as text on light. */
+/* Tokens: drafting-sheet greys, petrol-black ink, amber as the single signal colour (fills and CTAs, never text on light). */
 :root{
   --sheet:#EFF3F2; --paper:#fff; --ink:#08222B; --ink2:#43585E; --line:#BCC9CB;
   --amber:#FFB400; --amber-soft:#FFF0C2;
   --head:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
   --body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
-  --deva:"Hind","Nirmala UI","Noto Sans Devanagari",sans-serif;
   --r:4px; --max:1160px; color-scheme:light;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:76px}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{margin:0;background:var(--sheet);color:var(--ink);font:400 1.0625rem/1.55 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4,p,ul,ol,dl,dd,figure,address{margin:0}
-ul,ol{padding:0;list-style:none}
+h1,h2,h3,p,ul,dl,dd,figure,address{margin:0}
+ul{padding:0;list-style:none}
 a{color:inherit}
-svg{display:block;max-width:100%}
+img,svg{display:block;max-width:100%}
 p{text-wrap:pretty}
 h1,h2,h3{font-family:var(--head);font-weight:800;letter-spacing:-.01em;line-height:.98;text-wrap:balance}
 :focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px}
@@ -45,13 +44,12 @@ h1,h2,h3{font-family:var(--head);font-weight:800;letter-spacing:-.01em;line-heig
 .ic{width:1.25em;height:1.25em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .mono{font:500 .74rem/1.3 var(--mono);letter-spacing:.09em;text-transform:uppercase}
 
-/* section label: numbered like a drawing zone, with a hairline running out */
 .eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:18px;color:var(--ink2)}
 .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
 .dark .eyebrow{color:var(--amber)}
 .dark .eyebrow::after{background:rgba(239,243,242,.25)}
 
-/* buttons: flat and square-cut, invert on hover */
+/* buttons: flat, square-cut, invert on hover */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:0 1.4rem;border:2px solid var(--ink);border-radius:var(--r);background:var(--amber);color:var(--ink);font:700 1.0625rem/1 var(--body);letter-spacing:.01em;text-decoration:none;cursor:pointer;transition:background-color .15s,color .15s,transform .12s}
 .btn:active{transform:scale(.97)}
 .btn.line{background:transparent}
@@ -73,52 +71,34 @@ h1,h2,h3{font-family:var(--head);font-weight:800;letter-spacing:-.01em;line-heig
 .lock b{font:800 1.3rem/.9 var(--head);letter-spacing:-.005em;text-transform:uppercase}
 .lock i{font:500 .62rem/1 var(--mono);letter-spacing:.34em;text-transform:uppercase;font-style:normal;color:var(--ink2)}
 .nav{display:none}
-.top .btn{display:none}
-.top .cbtn{display:inline-flex}
+@media (max-width:859px){.top .btn{min-height:44px;padding:0 .95rem}}
 @media (min-width:860px){
   .nav{display:flex;gap:30px}
   .nav a{font-weight:600;text-decoration:none;padding:12px 0;border-bottom:3px solid transparent}
   .nav a:hover{border-color:var(--amber)}
-  .top .btn{display:inline-flex}
 }
-@media (max-width:859px){.top .cbtn{min-height:44px;padding:0 .95rem}}
 
-/* hero */
-.hero{padding:34px 0 60px}
-.hero-grid{display:grid;gap:40px}
-.hero .eyebrow{margin-bottom:16px}
+/* hero: photo first on phones, split on desktop */
+.hero{padding:0 0 52px}
+.hero-photo{position:relative;margin:0 -16px;border-bottom:2px solid var(--ink)}
+.hero-photo img{width:100%;height:auto;aspect-ratio:16/11;object-fit:cover}
+.hero-photo figcaption{position:absolute;left:16px;bottom:14px;background:var(--amber);color:var(--ink);padding:6px 10px}
+.copy{padding-top:30px}
+.copy .eyebrow{margin-bottom:16px}
 h1{font-size:clamp(3rem,13.4vw,5.5rem);margin-bottom:18px;isolation:isolate}
 /* amber block is painted behind all headline text so it never clips the descender above it */
 .tofit{position:relative;display:inline-block;padding:0 .13em;margin-left:-.04em;line-height:1.04}
 .tofit::before{content:"";position:absolute;inset:0;background:var(--amber);z-index:-1}
-.hi{font:500 1.15rem/1.45 var(--deva);color:var(--ink2);margin-bottom:12px}
-.lede{max-width:34rem;font-size:1.1875rem;margin-bottom:26px}
+.lede{max-width:32rem;font-size:1.1875rem;margin-bottom:26px}
 .cta{display:grid;gap:12px}
 @media (min-width:520px){.cta{display:flex;flex-wrap:wrap;gap:14px}}
 @media (min-width:900px){
-  .hero{padding:68px 0 96px}
-  .hero-grid{grid-template-columns:1.12fr .88fr;align-items:center;gap:64px}
+  .hero{padding:64px 0 96px}
+  .hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
+  .hero-photo{grid-column:2;grid-row:1;margin:0;border:2px solid var(--ink)}
+  .hero-photo img{aspect-ratio:4/5;object-position:32% center}
+  .copy{grid-column:1;grid-row:1;padding-top:0}
 }
-
-/* the drawing sheet */
-.sheet{background:var(--paper);border:2px solid var(--ink);border-radius:2px;max-width:470px;width:100%;justify-self:center}
-.sheet svg{width:100%;height:auto}
-.sheet text{font-family:var(--mono);fill:var(--ink)}
-.fr{fill:none;stroke:var(--ink)}
-.wire{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}
-.flow{fill:none;stroke:var(--amber);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3 13;animation:flow .9s linear infinite}
-.ray{fill:none;stroke:var(--amber);stroke-width:3;stroke-linecap:round;stroke-dasharray:7 7;animation:flow .9s linear infinite}
-.tip{fill:none;stroke:var(--amber);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.part{fill:var(--paper);stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}
-.cell{fill:var(--amber-soft);stroke:var(--ink);stroke-width:2}
-.bd{fill:none;stroke:var(--ink2);stroke-width:1.5;stroke-dasharray:7 5}
-.lead{fill:none;stroke:var(--ink);stroke-width:1.5}
-.bl{fill:var(--paper);stroke:var(--ink);stroke-width:1.8}
-.bn{font-size:11px;font-weight:500;text-anchor:middle;dominant-baseline:central}
-.lbl{font-size:10px;font-weight:500;letter-spacing:.04em}
-.lbl.mid{text-anchor:middle}
-.lbl.dim{fill:var(--ink2)}
-@keyframes flow{to{stroke-dashoffset:-16}}
 
 /* facts band */
 .facts{background:var(--amber);border-block:2px solid var(--ink)}
@@ -137,47 +117,52 @@ h1{font-size:clamp(3rem,13.4vw,5.5rem);margin-bottom:18px;isolation:isolate}
 
 /* sections */
 .sec{padding:68px 0}
-.sec h2{font-size:clamp(2.3rem,8.4vw,4.2rem);max-width:15ch;margin-bottom:22px}
+.sec h2{font-size:clamp(2.3rem,8.4vw,4.2rem);max-width:15ch;margin-bottom:26px}
 @media (min-width:900px){.sec{padding:104px 0}}
 
+/* products: photo cards, two-up on phones */
+.bom{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--ink);border:2px solid var(--ink);border-radius:2px}
+.item{display:flex;flex-direction:column;background:var(--paper)}
+.ph{position:relative;aspect-ratio:4/3;overflow:hidden;border-bottom:2px solid var(--ink);background:var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.no{position:absolute;left:8px;top:8px;display:grid;place-items:center;width:30px;height:30px;border:2px solid var(--ink);border-radius:50%;background:var(--paper);font:500 .82rem/1 var(--mono)}
+.item .body{padding:14px 14px 16px;flex:1}
+.item h3{font-size:1.4rem;margin-bottom:6px}
+.item p{color:var(--ink2);font-size:.95rem;line-height:1.4}
+.item a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:50px;padding:0 14px;border-top:1px solid var(--line);font-weight:700;font-size:.95rem;text-decoration:none}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){.item:hover .ph img{transform:scale(1.05)}}
+@media (hover:hover){.item a:hover{background:var(--ink);color:var(--amber)}}
+@media (min-width:700px){
+  .bom{grid-template-columns:repeat(3,1fr)}
+  .item .body{padding:20px 20px 22px}
+  .item h3{font-size:1.85rem}
+  .item p{font-size:1rem}
+  .item a{min-height:56px;padding:0 20px;font-size:1rem}
+  .no{left:12px;top:12px;width:34px;height:34px}
+}
+
+/* wide photo band */
+.band{border-block:2px solid var(--ink)}
+.band img{width:100%;height:auto;aspect-ratio:16/7;object-fit:cover}
+@media (min-width:700px){.band img{aspect-ratio:1280/270}}
+
 /* about */
-.about-grid{display:grid;gap:36px}
-.about-copy{display:grid;gap:16px;max-width:38rem}
+.about-grid{display:grid;gap:32px}
+.about-copy{max-width:34rem;font-size:1.15rem}
 @media (min-width:900px){.about-grid{grid-template-columns:1.1fr .9fr;gap:72px;align-items:start}}
 .spec{background:var(--paper);border:2px solid var(--ink);border-radius:2px}
-.spec header{padding:12px 18px;background:var(--ink);color:var(--sheet)}
-.spec dl{display:grid}
 .spec div{display:grid;gap:2px;padding:14px 18px}
 .spec div+div{border-top:1px solid var(--line)}
 .spec dt{color:var(--ink2)}
-.spec dd{font-weight:600;font-size:1.06rem}
-.spec dd.mono{font-size:.95rem;letter-spacing:.06em}
+.spec dd{font-weight:600;font-size:1.1rem}
 @media (min-width:520px){.spec div{grid-template-columns:8.5rem 1fr;gap:16px;align-items:baseline}}
-
-/* products = the parts list for the drawing */
-.sub{max-width:36rem;color:var(--ink2);margin:-6px 0 34px}
-.bom{display:grid;gap:2px;background:var(--ink);border:2px solid var(--ink);border-radius:2px}
-.item{position:relative;display:flex;flex-direction:column;padding:20px 20px 0;background:var(--paper)}
-.item-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
-.no{display:grid;place-items:center;width:34px;height:34px;border:2px solid var(--ink);border-radius:50%;background:var(--paper);font:500 .9rem/1 var(--mono)}
-.sym{width:68px;height:68px;fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.acc{fill:var(--amber)}
-.item h3{font-size:1.85rem;margin-bottom:8px}
-.item p{color:var(--ink2);margin-bottom:22px;max-width:30ch}
-.item a{margin:auto -20px 0;display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:56px;padding:0 20px;border-top:1px solid var(--line);font-weight:700;text-decoration:none}
-@media (hover:hover){.item:hover{background:var(--amber-soft)}.item a:hover{background:var(--ink);color:var(--amber)}}
-@media (min-width:700px){.bom{grid-template-columns:1fr 1fr}}
-@media (min-width:1020px){.bom{grid-template-columns:repeat(3,1fr)}}
 
 /* quote (dark) */
 .dark{background:var(--ink);color:var(--sheet)}
-.q-grid{display:grid;gap:36px}
+.q-grid{display:grid;gap:32px}
 .dark h2{max-width:11ch}
-.q-lede{color:rgba(239,243,242,.82);max-width:32rem;margin:-6px 0 28px}
-.have{border:1px solid rgba(239,243,242,.3);border-radius:2px;padding:18px 20px;max-width:32rem}
-.have .mono{color:var(--amber);display:block;margin-bottom:10px}
-.have li{display:flex;gap:12px;padding:7px 0;color:rgba(239,243,242,.9)}
-.have li::before{content:"";flex:none;width:8px;height:8px;margin-top:.55em;background:var(--amber)}
+.q-lede{color:rgba(239,243,242,.82);max-width:32rem;margin:-6px 0 12px}
+.q-tip{color:var(--amber)}
 .form{background:var(--paper);color:var(--ink);border-radius:2px;border:2px solid var(--sheet)}
 .form header{padding:12px 20px;background:var(--amber);color:var(--ink);border-bottom:2px solid var(--ink)}
 .form form{display:grid;gap:18px;padding:20px}
@@ -195,43 +180,33 @@ h1{font-size:clamp(3rem,13.4vw,5.5rem);margin-bottom:18px;isolation:isolate}
 .addr h3{font-size:1.7rem;margin-bottom:12px}
 .addr address{font-style:normal;display:flex;gap:10px;margin-bottom:18px}
 .addr address .ic{margin-top:.2em}
-.addr dl{display:grid;gap:10px;padding:16px 0;margin-bottom:18px;border-block:1px solid var(--line)}
-.addr dt{color:var(--ink2)}
-.addr dd{font-weight:600}
 .acts{display:flex;flex-wrap:wrap;gap:12px}
 .map{min-height:340px;background:#dfe6e5;overflow:hidden}
 .map iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
 @media (min-width:900px){.v-grid{grid-template-columns:.85fr 1.15fr;gap:48px;align-items:stretch}}
 
-/* footer = drawing title block */
+/* footer: drawing-style title block */
 footer{background:var(--ink);color:var(--sheet);padding:44px 0 calc(110px + env(safe-area-inset-bottom))}
-.tb{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--sheet)}
-.tb>div{padding:14px 16px;border-right:1px solid rgba(239,243,242,.35);border-bottom:1px solid rgba(239,243,242,.35)}
-.tb>div:nth-child(even){border-right:0}
-.tb .wide{grid-column:1/-1;border-right:0}
+.tb{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(239,243,242,.35);border:2px solid var(--sheet)}
+.tb>div{background:var(--ink);padding:14px 16px}
+.tb .wide{grid-column:1/-1}
 .tb .mono{display:block;color:var(--amber);margin-bottom:5px}
 .tb b{font:700 1.06rem/1.35 var(--body)}
 .tb a{text-underline-offset:4px}
-.tb>div:last-child,.tb>div:nth-last-child(2){border-bottom:0}
-.legal{margin-top:18px;color:rgba(239,243,242,.7);font-size:.9rem}
+.legal{margin-top:20px;color:rgba(239,243,242,.7);font-size:.9rem}
+.credits{margin-top:12px;color:rgba(239,243,242,.6);font-size:.8rem;line-height:1.6;max-width:70rem}
+.credits a{text-underline-offset:3px}
 @media (min-width:860px){
   footer{padding-bottom:44px}
-  .tb{grid-template-columns:1.4fr 1fr 1fr 1fr}
-  .tb>div,.tb>div:nth-child(even){border-right:1px solid rgba(239,243,242,.35);border-bottom:1px solid rgba(239,243,242,.35)}
-  .tb>div:nth-child(4n){border-right:0}
-  .tb .wide{grid-column:auto}
-  .tb>div:nth-last-child(-n+4){border-bottom:0}
+  .tb{grid-template-columns:repeat(4,1fr)}
+  .tb .wide{grid-column:span 2}
 }
 
 /* mobile dock, tucked away while the hero buttons are on screen */
 .dock{position:fixed;inset:auto 0 0 0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--sheet);border-top:2px solid var(--ink);transition:transform .3s}
 .dock.away{transform:translateY(100%)}
 @media (min-width:860px){.dock{display:none}}
-
-@media (prefers-reduced-motion:reduce){
-  .flow,.ray{animation:none}
-  *{transition:none!important}
-}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body id="top">
@@ -251,12 +226,12 @@ footer{background:var(--ink);color:var(--sheet);padding:44px 0 calc(110px + env(
       <span class="lock"><b>Visible Energy</b><i>Solutions</i></span>
     </a>
     <nav class="nav" aria-label="Sections">
-      <a href="#about">About</a>
       <a href="#products">Products</a>
+      <a href="#about">About</a>
       <a href="#quote">Get a quote</a>
       <a href="#visit">Visit</a>
     </nav>
-    <a class="btn sm cbtn" href="tel:+917014066390"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>70140 66390</a>
+    <a class="btn sm" href="tel:+917014066390"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>70140 66390</a>
   </div>
 </header>
 
@@ -265,94 +240,19 @@ footer{background:var(--ink);color:var(--sheet);padding:44px 0 calc(110px + env(
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
+    <figure class="hero-photo">
+      <img src="img/hero.jpg" width="1280" height="720" alt="Long rows of solar panels across a large solar power plant in the Rajasthan desert" fetchpriority="high">
+      <figcaption class="mono">Bhadla Solar Park, Rajasthan</figcaption>
+    </figure>
+    <div class="copy">
       <p class="eyebrow mono">Solar power developer · Jaipur</p>
       <h1>Solar power, engineered <span class="tofit">to fit.</span></h1>
-      <p class="hi" lang="hi">सोलर पैनल, पावर प्लांट, स्ट्रीट लाइट, ऑनलाइन यूपीएस और इंस्टॉलेशन</p>
-      <p class="lede">Solar panels, power plants, street lights and Online UPS, supplied and installed by a Jaipur firm. Established 2019.</p>
+      <p class="lede">Solar panels, power plants, street lights and Online UPS. Supplied and installed from Jaipur since 2019.</p>
       <div class="cta">
         <a class="btn" href="tel:+917014066390"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call 70140 66390</a>
         <a class="btn line" href="https://wa.me/917014066390?text=Hello%20Visible%20Energy%20Solutions%2C%20I%27d%20like%20a%20solar%20quote." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Quote on WhatsApp</a>
       </div>
     </div>
-
-    <figure class="sheet">
-      <svg viewBox="0 0 360 470" role="img" aria-label="Single line diagram of a solar plant. Sunlight falls on a PV array, which feeds an inverter, then an AC bus that supplies an Online UPS, a net meter and a solar street light.">
-        <rect class="fr" x="8" y="8" width="344" height="454" stroke-width="2"/>
-        <rect class="fr" x="15" y="15" width="330" height="440" stroke-width="1" style="stroke:#BCC9CB"/>
-
-        <!-- sunlight -->
-        <text class="lbl dim" x="24" y="42">SUNLIGHT</text>
-        <g class="ray"><path d="M74 28L126 66"/><path d="M106 28L158 66"/><path d="M138 28L190 66"/><path d="M170 28L222 66"/></g>
-        <g class="tip"><path d="M122.5 58.8L126 66L118.1 64.9"/><path d="M154.5 58.8L158 66L150.1 64.9"/><path d="M186.5 58.8L190 66L182.1 64.9"/><path d="M218.5 58.8L222 66L214.1 64.9"/></g>
-
-        <!-- plant boundary -->
-        <rect class="bd" x="96" y="44" width="168" height="192"/>
-        <text class="lbl dim" x="104" y="229">SOLAR PLANT</text>
-
-        <!-- PV array -->
-        <rect class="cell" x="110" y="66" width="140" height="60"/>
-        <path d="M145 66V126M180 66V126M215 66V126M110 96H250" stroke="#08222B" stroke-width="2" fill="none"/>
-        <text class="lbl" x="112" y="141">PV ARRAY</text>
-
-        <!-- wires -->
-        <path class="wire" d="M180 126V168"/>
-        <path class="wire" d="M180 218V262"/>
-        <path class="wire" d="M70 262H290" stroke-width="4"/>
-        <path class="wire" d="M70 262V300M180 262V301M290 262V300"/>
-        <g class="flow">
-          <path d="M180 126V168"/><path d="M180 218V262"/>
-          <path d="M180 262H70V300"/><path d="M180 262V301"/><path d="M180 262H290V300"/>
-        </g>
-        <text class="lbl" x="188" y="151">DC</text>
-        <text class="lbl" x="224" y="256">AC BUS</text>
-
-        <!-- inverter -->
-        <rect class="part" x="140" y="168" width="80" height="50"/>
-        <path d="M220 168L140 218" stroke="#08222B" stroke-width="2" fill="none"/>
-        <path d="M150 181H168M150 187H168" stroke="#08222B" stroke-width="2" fill="none"/>
-        <path d="M192 203q4-8 8 0t8 0" stroke="#08222B" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <text class="lbl" x="188" y="231">INVERTER</text>
-
-        <!-- online UPS -->
-        <rect class="part" x="40" y="300" width="60" height="52"/>
-        <path d="M54 313V339M64 320V332M74 313V339M84 320V332" stroke="#08222B" stroke-width="3" fill="none"/>
-        <text class="lbl mid" x="70" y="367">ONLINE UPS</text>
-
-        <!-- net meter -->
-        <circle class="part" cx="180" cy="325" r="24"/>
-        <text x="180" y="326" class="bn" style="font-size:11px;font-weight:500">kWh</text>
-        <text class="lbl mid" x="180" y="367">NET METER</text>
-
-        <!-- street light (IEC luminaire symbol) -->
-        <circle class="part" cx="290" cy="314" r="14"/>
-        <path d="M280 304L300 324M300 304L280 324" stroke="#08222B" stroke-width="2" fill="none"/>
-        <text class="lbl mid" x="290" y="367">STREET LIGHT</text>
-
-        <!-- item balloons -->
-        <path class="lead" d="M250 96H272M264 44V44"/>
-        <circle class="bl" cx="282" cy="96" r="10"/><text class="bn" x="282" y="96">1</text>
-        <circle class="bl" cx="264" cy="44" r="10"/><text class="bn" x="264" y="44">2</text>
-        <path class="lead" d="M128 193H140"/>
-        <circle class="bl" cx="118" cy="193" r="10"/><text class="bn" x="118" y="193">3</text>
-        <path class="lead" d="M290 262H308"/>
-        <circle class="bl" cx="318" cy="262" r="10"/><text class="bn" x="318" y="262">4</text>
-        <path class="lead" d="M304 314H316"/>
-        <circle class="bl" cx="326" cy="314" r="10"/><text class="bn" x="326" y="314">5</text>
-        <path class="lead" d="M100 326H112"/>
-        <circle class="bl" cx="122" cy="326" r="10"/><text class="bn" x="122" y="326">6</text>
-
-        <text class="lbl dim" x="24" y="392" style="font-size:9px">ITEM NOS. REFER TO PRODUCTS &amp; SERVICES</text>
-
-        <!-- title block -->
-        <rect class="fr" x="15" y="402" width="330" height="53" stroke-width="1.5"/>
-        <path class="fr" d="M225 402V455M15 428H225" stroke-width="1.5"/>
-        <text x="24" y="419" style="font-size:11px;font-weight:500">SOLAR POWER PLANT</text>
-        <text x="24" y="445" style="font-size:9.5px;font-weight:400;fill:#43585E">SINGLE LINE DIAGRAM</text>
-        <text x="235" y="419" style="font-size:10px;font-weight:500">DRG VES-01</text>
-        <text x="235" y="445" style="font-size:9.5px;font-weight:400;fill:#43585E">SHEET 1 OF 1</text>
-      </svg>
-    </figure>
   </div>
 </section>
 
@@ -368,85 +268,64 @@ footer{background:var(--ink);color:var(--sheet);padding:44px 0 calc(110px + env(
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="sec" id="about">
-  <div class="wrap">
-    <p class="eyebrow mono">01 · About</p>
-    <h2>A Jaipur solar firm, since 2019.</h2>
-    <div class="about-grid">
-      <div class="about-copy">
-        <p>Visible Energy Solutions is a solar power developer. We install solar power plants with careful engineering and solutions customised to each customer.</p>
-        <p>We began in 2019 as a sole proprietorship in Jaipur, Rajasthan. Today we are a wholesale trader of solar systems, solar power plants, solar street lights and more, and we provide solar power plant installation to our customers.</p>
-        <p>We source from trusted, renowned vendors after careful market analysis, offer reasonable rates and deliver within the promised time-frame. Under our proprietor, Mr. Vipin Bansal, we have built a clientele across the nation.</p>
-      </div>
-
-      <div class="spec">
-        <header class="mono">Firm details</header>
-        <dl>
-          <div><dt class="mono">Firm</dt><dd>Sole proprietorship, est. 2019</dd></div>
-          <div><dt class="mono">Proprietor</dt><dd>Mr. Vipin Bansal</dd></div>
-          <div><dt class="mono">Supplies</dt><dd>Solar panels, systems, power plants, street lights, Online UPS</dd></div>
-          <div><dt class="mono">Service</dt><dd>Solar power plant installation</dd></div>
-          <div><dt class="mono">Sourcing</dt><dd>Trusted vendors, after market analysis</dd></div>
-          <div><dt class="mono">Delivery</dt><dd>Within the promised time-frame</dd></div>
-          <div><dt class="mono">GSTIN</dt><dd class="mono">08BKCPB1028E1ZW</dd></div>
-        </dl>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PRODUCTS -->
-<section class="sec" id="products" style="padding-top:0">
+<section class="sec" id="products">
   <div class="wrap">
-    <p class="eyebrow mono">02 · Products &amp; services</p>
+    <p class="eyebrow mono">01 · Products &amp; services</p>
     <h2>Everything solar, from one supplier.</h2>
-    <p class="sub">Item numbers match the diagram at the top of the page. Tap a line to ask for a price on WhatsApp.</p>
 
     <ul class="bom">
       <li class="item">
-        <div class="item-top"><span class="no">1</span>
-          <svg class="sym" viewBox="0 0 64 64" aria-hidden="true"><rect class="acc" x="8" y="16" width="48" height="28"/><path d="M24 16v28M40 16v28M8 30h48M22 44l-6 12M42 44l6 12M12 56h40"/></svg></div>
-        <h3>Solar Panels</h3>
-        <p>Photovoltaic panels that turn sunlight into electricity.</p>
+        <div class="ph"><img loading="lazy" decoding="async" src="img/panel.jpg" width="960" height="640" alt="Close-up of solar panel cells"><span class="no">1</span></div>
+        <div class="body"><h3>Solar Panels</h3><p>Turn sunlight into electricity.</p></div>
         <a href="https://wa.me/917014066390?text=Hello%20Visible%20Energy%20Solutions%2C%20I%27d%20like%20a%20price%20for%20Solar%20Panels." target="_blank" rel="noopener">Ask for price<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </li>
       <li class="item">
-        <div class="item-top"><span class="no">2</span>
-          <svg class="sym" viewBox="0 0 64 64" aria-hidden="true"><rect class="acc" x="6" y="8" width="16" height="12"/><rect class="acc" x="24" y="8" width="16" height="12"/><rect class="acc" x="42" y="8" width="16" height="12"/><rect class="acc" x="6" y="26" width="16" height="12"/><rect class="acc" x="24" y="26" width="16" height="12"/><rect class="acc" x="42" y="26" width="16" height="12"/><path d="M32 38v8"/><rect x="24" y="46" width="16" height="12"/></svg></div>
-        <h3>Solar Power Plants</h3>
-        <p>Complete solar power plants, planned around your site and load.</p>
+        <div class="ph"><img loading="lazy" decoding="async" src="img/plant.jpg" width="960" height="540" alt="Aerial view of a large solar power plant and its substation"><span class="no">2</span></div>
+        <div class="body"><h3>Solar Power Plants</h3><p>Complete plants, planned around your site.</p></div>
         <a href="https://wa.me/917014066390?text=Hello%20Visible%20Energy%20Solutions%2C%20I%27d%20like%20a%20price%20for%20a%20Solar%20Power%20Plant." target="_blank" rel="noopener">Ask for price<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </li>
       <li class="item">
-        <div class="item-top"><span class="no">3</span>
-          <svg class="sym" viewBox="0 0 64 64" aria-hidden="true"><path class="acc" d="M10 14H54L10 50Z"/><rect x="10" y="14" width="44" height="36"/><path d="M54 14L10 50M17 24h10M17 29h10M38 43q3-6 6 0t6 0"/></svg></div>
-        <h3>Solar System</h3>
-        <p>Solar systems that generate and deliver power, matched to your requirement.</p>
+        <div class="ph"><img loading="lazy" decoding="async" src="img/system.jpg" width="720" height="540" alt="Solar panels on the rooftops of houses in an Indian city"><span class="no">3</span></div>
+        <div class="body"><h3>Solar System</h3><p>Systems matched to your requirement.</p></div>
         <a href="https://wa.me/917014066390?text=Hello%20Visible%20Energy%20Solutions%2C%20I%27d%20like%20a%20price%20for%20a%20Solar%20System." target="_blank" rel="noopener">Ask for price<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </li>
       <li class="item">
-        <div class="item-top"><span class="no">4</span>
-          <svg class="sym" viewBox="0 0 64 64" aria-hidden="true"><path class="acc" d="M12 40c0-13 8-22 20-22s20 9 20 22z"/><path d="M32 18v22"/><rect x="8" y="40" width="48" height="7"/></svg></div>
-        <h3>Installation Services</h3>
-        <p>Solar power plant installation at your site.</p>
+        <div class="ph"><img loading="lazy" decoding="async" src="img/installation.jpg" width="960" height="640" alt="Installers in safety harnesses fitting solar panel frames on a roof"><span class="no">4</span></div>
+        <div class="body"><h3>Installation Services</h3><p>Solar plant installation at your site.</p></div>
         <a href="https://wa.me/917014066390?text=Hello%20Visible%20Energy%20Solutions%2C%20I%27d%20like%20to%20ask%20about%20solar%20plant%20installation." target="_blank" rel="noopener">Ask for price<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </li>
       <li class="item">
-        <div class="item-top"><span class="no">5</span>
-          <svg class="sym" viewBox="0 0 64 64" aria-hidden="true"><path class="acc" d="M8 12L24 6L26 12L10 18Z"/><path d="M20 58V15M20 20h26"/><path class="acc" d="M40 20h12l-3 8H43Z"/><path d="M42 34l-2 6M46 34v7M50 34l2 6"/></svg></div>
-        <h3>Solar Street Light</h3>
-        <p>Solar-powered street lighting for roads, colonies and campuses.</p>
+        <div class="ph"><img loading="lazy" decoding="async" src="img/street.jpg" width="960" height="720" alt="Solar street light on a yellow pole with a panel above the lamp"><span class="no">5</span></div>
+        <div class="body"><h3>Solar Street Light</h3><p>Street lighting powered by the sun.</p></div>
         <a href="https://wa.me/917014066390?text=Hello%20Visible%20Energy%20Solutions%2C%20I%27d%20like%20a%20price%20for%20Solar%20Street%20Lights." target="_blank" rel="noopener">Ask for price<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </li>
       <li class="item">
-        <div class="item-top"><span class="no">6</span>
-          <svg class="sym" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="14" width="48" height="36"/><path d="M20 26v16M28 30v8M36 26v16M44 30v8M16 50v6M48 50v6" stroke-width="3"/><rect class="acc" x="46" y="18" width="6" height="6"/></svg></div>
-        <h3>Online UPS</h3>
-        <p>Backup power with no switch-over gap, for sensitive equipment.</p>
+        <div class="ph"><img loading="lazy" decoding="async" src="img/ups.jpg" width="960" height="720" alt="A UPS unit on a desk beside a keyboard"><span class="no">6</span></div>
+        <div class="body"><h3>Online UPS</h3><p>Backup power with no switch-over gap.</p></div>
         <a href="https://wa.me/917014066390?text=Hello%20Visible%20Energy%20Solutions%2C%20I%27d%20like%20a%20price%20for%20an%20Online%20UPS." target="_blank" rel="noopener">Ask for price<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </li>
     </ul>
+  </div>
+</section>
+
+<figure class="band">
+  <img loading="lazy" decoding="async" src="img/band.jpg" width="1280" height="270" alt="Installers fitting black solar panels on a roof">
+</figure>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <p class="eyebrow mono">02 · About</p>
+    <h2>A Jaipur solar firm, since 2019.</h2>
+    <div class="about-grid">
+      <p class="about-copy">We are a solar power developer and wholesale trader. We install solar power plants with careful engineering, source from trusted vendors and deliver within the promised time-frame.</p>
+      <dl class="spec">
+        <div><dt class="mono">Established</dt><dd>2019, Jaipur</dd></div>
+        <div><dt class="mono">Proprietor</dt><dd>Mr. Vipin Bansal</dd></div>
+        <div><dt class="mono">GSTIN</dt><dd class="mono" style="font-size:.95rem">08BKCPB1028E1ZW</dd></div>
+      </dl>
+    </div>
   </div>
 </section>
 
@@ -456,16 +335,8 @@ footer{background:var(--ink);color:var(--sheet);padding:44px 0 calc(110px + env(
     <div>
       <p class="eyebrow mono">03 · Get a quote</p>
       <h2>Tell us what you need.</h2>
-      <p class="q-lede">Send your requirement on WhatsApp, or call 70140 66390.</p>
-      <div class="have">
-        <span class="mono">Keep these handy</span>
-        <ul>
-          <li>Your monthly electricity bill</li>
-          <li>Your sanctioned load, in kW</li>
-          <li>Roof or open-land area</li>
-          <li>Your location</li>
-        </ul>
-      </div>
+      <p class="q-lede">Send it on WhatsApp, or call 70140 66390.</p>
+      <p class="q-tip mono">Handy: monthly bill · roof area · location</p>
     </div>
 
     <div class="form">
@@ -496,10 +367,6 @@ footer{background:var(--ink);color:var(--sheet);padding:44px 0 calc(110px + env(
       <div class="card addr">
         <h3>Visible Energy Solutions</h3>
         <address><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>1-C-B, Vishveshariya Nagar,<br>Near Triveni Flyover, Gopalpura Bypass Rd,<br>Jaipur, Rajasthan 302018</span></address>
-        <dl>
-          <div><dt class="mono">Phone</dt><dd><a href="tel:+917014066390">70140 66390</a></dd></div>
-          <div><dt class="mono">GSTIN</dt><dd class="mono" style="font-size:.95rem">08BKCPB1028E1ZW</dd></div>
-        </dl>
         <div class="acts">
           <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Visible+Energy+Solutions+Vishveshariya+Nagar+Gopalpura+Bypass+Road+Jaipur+302018" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Get directions</a>
           <a class="btn line" href="tel:+917014066390"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
@@ -521,11 +388,19 @@ footer{background:var(--ink);color:var(--sheet);padding:44px 0 calc(110px + env(
       <div><span class="mono">Proprietor</span><b>Mr. Vipin Bansal</b></div>
       <div><span class="mono">Established</span><b>2019, Jaipur</b></div>
       <div><span class="mono">GSTIN</span><b>08BKCPB1028E1ZW</b></div>
-      <div class="wide"><span class="mono">Address</span><b>1-C-B, Vishveshariya Nagar, Near Triveni Flyover, Gopalpura Bypass Rd, Jaipur, Rajasthan 302018</b></div>
       <div><span class="mono">Phone</span><b><a href="tel:+917014066390">70140 66390</a></b></div>
-      <div><span class="mono">Drawing</span><b>VES-01 · Sheet 1 of 1</b></div>
+      <div class="wide"><span class="mono">Address</span><b>1-C-B, Vishveshariya Nagar, Near Triveni Flyover, Gopalpura Bypass Rd, Jaipur, Rajasthan 302018</b></div>
     </div>
     <p class="legal">&copy; 2026 Visible Energy Solutions, Jaipur.</p>
+    <p class="credits">Photos from Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:AMP_Energy_Bhadla_Solar_Power_Plant_-_53700156579.jpg" target="_blank" rel="noopener">Bhadla Solar Park</a> and
+      <a href="https://commons.wikimedia.org/wiki/File:AMP_Energy_Bhadla_Solar_Power_Plant_-_53699816551.jpg" target="_blank" rel="noopener">aerial view</a> by Sarvajanik Puralekh (CC BY-SA 2.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Close-up_of_a_polycrystalline_solar_PV_panel.jpg" target="_blank" rel="noopener">solar panel</a> by Guilhem Vellut (CC BY 2.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Rooftop_Solar_panels_on_homes_in_Mehsana,_Gujarat,_India.jpg" target="_blank" rel="noopener">rooftop solar, Mehsana</a> by Nizil Shah (CC BY-SA 4.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Solar_technicians.jpg" target="_blank" rel="noopener">solar technicians</a> by SAgbley (CC BY-SA 4.0);
+      <a href="https://commons.wikimedia.org/wiki/File:India_-_Sights_%26_Culture_-_solar_street_light_(6321978878).jpg" target="_blank" rel="noopener">solar street light</a> by McKay Savage (CC BY 2.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Three_men_installing_solar_panels_on_a_house.jpg" target="_blank" rel="noopener">roof installation</a> by W.carter (CC0);
+      <a href="https://commons.wikimedia.org/wiki/File:APC_Back-UPS_ES525.jpg" target="_blank" rel="noopener">UPS</a> by MSDN.WhiteKnight (CC0). Images are cropped and resized.</p>
   </div>
 </footer>
 
